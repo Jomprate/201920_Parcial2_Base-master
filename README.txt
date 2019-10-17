@@ -1,0 +1,2 @@
+Actualmente se cuadro lo que son la aparicion de los Jugadores, el arbol aun no esta completamente armado, 
+se creo un GameObject que esta encargado de crear el navmesh, y se Cuadraron las capas a usar
