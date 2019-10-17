@@ -38,17 +38,28 @@ public class GameController : MonoBehaviour
         for (int i = 0; i < playerCount; i++)
         {
             string prefabPath = i == 0 && instantiateHumanPlayer ? "HumanPlayer" : "AIPlayer";
-            
+
             GameObject playerInstance = Instantiate(Resources.Load<GameObject>(prefabPath));
-            
-            
-            
+            #region Create Displacement
+            float x = Random.Range(-20f, 20f);
+            float z = Random.Range(-20f, 20f);
+            playerInstance.transform.position = new Vector3(x , 1, z);
+            #endregion
+
+
+
             playerInstance.name = string.Format("Player{0}", i + 1);
 
             taggedScore.Add(playerInstance.name, 0);
         }
 
+
+
         Invoke("EndGame", playTime);
+    }
+    private void Update()
+    {
+        
     }
 
     private void EndGame()

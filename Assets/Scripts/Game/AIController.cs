@@ -5,6 +5,20 @@ using UnityEngine;
 public class AIController : PlayerController
 {
     protected GameObject[] playersGroup;
+    protected Transform[] enemies;
+
+    private void Start()
+    {
+        playersGroup = GameObject.FindGameObjectsWithTag("Player");
+        enemies = new Transform[playersGroup.Length];
+
+        for (int i = 0; i < playersGroup.Length; i++)
+        {
+            enemies[i] = playersGroup[i].GetComponent<Transform>();
+
+        }
+
+    }
 
     protected override Vector3 GetLocation()
     {
@@ -17,7 +31,7 @@ public class AIController : PlayerController
     {
         for (int i = 0; i < playersGroup.Length; i++)
         {
-
+            
         }
     }
 }
