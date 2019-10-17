@@ -1,2 +1,9 @@
-Actualmente se cuadro lo que son la aparicion de los Jugadores, el arbol aun no esta completamente armado, 
-se creo un GameObject que esta encargado de crear el navmesh, y se Cuadraron las capas a usar
+
+
+
+-Arbol de comportamiento Organizado
+-GameObject encargado del NavMesh
+-Capas a usar listas
+-Aparicion jugadores(por ahora no se ha cambiado el lugar)
+
+Santiago Rodriguez Londoño
