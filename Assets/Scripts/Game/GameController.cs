@@ -40,13 +40,12 @@ public class GameController : MonoBehaviour
             string prefabPath = i == 0 && instantiateHumanPlayer ? "HumanPlayer" : "AIPlayer";
 
             GameObject playerInstance = Instantiate(Resources.Load<GameObject>(prefabPath));
+
             #region Create Displacement
             float x = Random.Range(-20f, 20f);
             float z = Random.Range(-20f, 20f);
             playerInstance.transform.position = new Vector3(x , 1, z);
             #endregion
-
-
 
             playerInstance.name = string.Format("Player{0}", i + 1);
 

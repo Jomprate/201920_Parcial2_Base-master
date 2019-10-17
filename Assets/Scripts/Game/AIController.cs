@@ -5,7 +5,7 @@ using UnityEngine;
 public class AIController : PlayerController
 {
     protected GameObject[] playersGroup;
-    protected Transform[] enemies;
+    public Transform[] enemies;
 
     private void Start()
     {
