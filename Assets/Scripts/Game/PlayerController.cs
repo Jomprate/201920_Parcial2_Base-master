@@ -29,15 +29,13 @@ public abstract class PlayerController : MonoBehaviour
             GoToLocation(GetLocation());
 
         }
+        
     }
     protected abstract Vector3 GetLocation();
 
     public void GoToLocation(Vector3 location)
     {
-       
-        
         agent.SetDestination(location);
-
     }
 
     public virtual IEnumerator StopLogic()
