@@ -29,9 +29,6 @@ public class AIController : PlayerController
 
     public void Update()
     {
-        for (int i = 0; i < playersGroup.Length; i++)
-        {
-            
-        }
+        
     }
 }
