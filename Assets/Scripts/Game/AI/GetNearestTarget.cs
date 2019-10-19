@@ -9,7 +9,7 @@ public class GetNearestTarget : Node
 
     public override void Execute()
     {
-        //GameObject target;
+        GameObject target;
         float minDistance = 1000;
 
         for (int i = 0; i < aiController.enemies.Length; i++)

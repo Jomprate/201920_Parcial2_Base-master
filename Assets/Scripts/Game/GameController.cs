@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
     public delegate void OnTaggedChange(string newTagged);
 
     public event OnTaggedChange onTaggedChange;
+    
 
     [SerializeField]
     private float playTime = 60F;

@@ -14,13 +14,24 @@ namespace AI
 
 		private float elapsedTime;
 
-		private void Update ()
+        private bool logicIsStopped = false;
+
+        public bool LogicIsStopped { get => this.logicIsStopped; set => this.logicIsStopped = value; }
+
+        private void Update ()
 		{
-			elapsedTime += Time.deltaTime;
-			if (elapsedTime >= stepTime) {
-				root.Execute ();
-				elapsedTime = 0f;
-			}
+            if (!logicIsStopped)
+            {
+                elapsedTime += Time.deltaTime;
+                if (elapsedTime >= stepTime)
+                {
+                    //root.Execute();
+                    elapsedTime = 0f;
+                }
+            }
+
+
+			
 		}
 	}
 }

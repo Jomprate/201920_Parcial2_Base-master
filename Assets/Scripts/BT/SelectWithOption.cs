@@ -15,8 +15,7 @@ namespace AI
     
         public override void Execute()
         {
-            if (!stopBT)
-            {
+            
                 if (Check())
                 {
                     successTree.Execute();
@@ -25,7 +24,7 @@ namespace AI
                 {
                     failTree.Execute();
                 }
-            }
+            
             
         }
         public abstract bool Check();

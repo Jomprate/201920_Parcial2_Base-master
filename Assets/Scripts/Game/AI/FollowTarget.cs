@@ -12,7 +12,7 @@ public class FollowTarget : Node
 
     public override void Execute()
     {
-        transform.LookAt(target.transform); //Update the LookAT transform
+        //transform.LookAt(getNearestTarget..transform); //Update the LookAT transform
 
         
         

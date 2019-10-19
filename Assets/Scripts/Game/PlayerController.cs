@@ -16,7 +16,9 @@ public abstract class PlayerController : MonoBehaviour
 
     protected NavMeshAgent agent { get; set; }
 
-    public bool IsTagged { get; protected set; }
+    [Header("Tagged")]
+    //public bool IsTagged { get; protected set; }
+    public bool IsTagged;
 
     public void SwitchRoles()
     {
@@ -47,6 +49,7 @@ public abstract class PlayerController : MonoBehaviour
     {
         
         // Stop BT runner if AI player, else stop movement.
+        
         
 
         yield return new WaitForSeconds(stopTime);
