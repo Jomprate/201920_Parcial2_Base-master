@@ -14,7 +14,7 @@ public class GetNearestTarget : Node
 
         for (int i = 0; i < aiController.enemies.Length; i++)
         {
-            if (minDistance > (transform.position - aiController.transform.position).magnitude)
+            if (minDistance > (transform.position - aiController.transform.position).magnitude && minDistance > 0.5f)
             {
                 minDistance = ((transform.position - aiController.transform.position).magnitude);
                 target = aiController.enemies[i].gameObject;
