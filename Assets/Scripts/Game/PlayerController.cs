@@ -65,10 +65,11 @@ public abstract class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        SwitchRoles();
+        
 
         if (collision.gameObject.tag == "Player" )
         {
+            SwitchRoles();
             if (IsTagged)
             {
                 StopLogic();

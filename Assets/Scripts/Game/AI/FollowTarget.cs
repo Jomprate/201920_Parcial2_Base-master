@@ -23,7 +23,6 @@ public class FollowTarget : Node
     }
     private void Update()
     {
-        
     }
 
 }
