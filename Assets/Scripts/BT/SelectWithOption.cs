@@ -10,18 +10,24 @@ namespace AI
         [SerializeField]
         private Group failTree;
 
-        public abstract bool Check();
+        protected bool stopBT;
 
+    
         public override void Execute()
         {
-            if (Check())
+            if (!stopBT)
             {
-                successTree.Execute();
+                if (Check())
+                {
+                    successTree.Execute();
+                }
+                else
+                {
+                    failTree.Execute();
+                }
             }
-            else
-            {
-                failTree.Execute();
-            }
+            
         }
+        public abstract bool Check();
     }
 }

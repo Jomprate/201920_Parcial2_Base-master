@@ -1,8 +1,8 @@
 ﻿using AI;
 
-public class IsTaggedActorNear : Selector
+public class IsTaggedActorNear : SelectWithOption
 {
-    protected override bool Check()
+    public override bool Check()
     {
         throw new System.NotImplementedException();
     }

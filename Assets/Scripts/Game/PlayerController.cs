@@ -9,6 +9,9 @@ public abstract class PlayerController : MonoBehaviour
     [SerializeField]
     private float stopTime = 3F;
 
+    TagCounter tagCounter;
+
+    
     //[SerializeField] protected Camera thisCamera;
 
     protected NavMeshAgent agent { get; set; }
@@ -18,6 +21,8 @@ public abstract class PlayerController : MonoBehaviour
     public void SwitchRoles()
     {
         IsTagged = !IsTagged;
+
+        Debug.Log("Cambio");
 
         // Pause all logic and restart after
     }
@@ -40,7 +45,9 @@ public abstract class PlayerController : MonoBehaviour
 
     public virtual IEnumerator StopLogic()
     {
+        
         // Stop BT runner if AI player, else stop movement.
+        
 
         yield return new WaitForSeconds(stopTime);
         
@@ -60,9 +67,15 @@ public abstract class PlayerController : MonoBehaviour
     {
         SwitchRoles();
 
-        if (IsTagged)
+        if (collision.gameObject.tag == "Player" )
         {
-            StopLogic(); 
+            if (IsTagged)
+            {
+                StopLogic();
+            }
         }
+        
+
+        
     }
 }

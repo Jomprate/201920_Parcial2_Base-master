@@ -1,8 +1,8 @@
 ﻿using AI;
 
-public class IsActorTagged : Selector
+public class IsActorTagged : SelectWithOption
 {
-    protected override bool Check()
+    public override bool Check()
     {
 
 
