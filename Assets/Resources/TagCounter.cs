@@ -7,13 +7,14 @@ using UnityEngine.UI;
 public class TagCounter : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI numberTags;
+    public int Tags;
     public bool isTagged = false;
 
     // Start is called before the first frame update
     void Start()
     {
         numberTags = GetComponent<TextMeshProUGUI>();
-        numberTags.text = 0.ToString() ;
+        numberTags.text = Tags.ToString() ;
     }
 
     // Update is called once per frame
@@ -21,4 +22,5 @@ public class TagCounter : MonoBehaviour
     {
         
     }
+
 }

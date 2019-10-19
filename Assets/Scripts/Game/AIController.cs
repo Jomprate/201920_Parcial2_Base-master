@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(BehaviourRunner))]
 public class AIController : PlayerController
 {
+    BehaviourRunner behaviourRunner;
+
     protected GameObject[] playersGroup;
     public Transform[] enemies;
 
@@ -30,5 +32,11 @@ public class AIController : PlayerController
     public void Update()
     {
         
+    }
+
+    public void Movement()
+    {
+
+
     }
 }

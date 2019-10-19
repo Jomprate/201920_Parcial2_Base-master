@@ -6,17 +6,10 @@ public class FollowTarget : Node
 {
     GetNearestTarget getNearestTarget;
     AIController aIController;
-    Node node;
-
-    
 
     public override void Execute()
     {
         //transform.LookAt(getNearestTarget..transform); //Update the LookAT transform
-
-        
-        
-
 
 
         //throw new System.NotImplementedException();
